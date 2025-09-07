@@ -1,17 +1,85 @@
 /* CSS Reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,21 +88,34 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -46,7 +127,7 @@ table {
 @font-face {
   font-family: 'Roboto';
   src: url('/fonts/Roboto-Regular.woff2') format('woff2'),
-       url('/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    url('/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -66,7 +147,7 @@ body {
   margin: 0;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   padding: 24px 28px;
   position: absolute;
   top: 18px;
@@ -86,6 +167,8 @@ body {
   font-size: 2rem;
   margin-bottom: 1rem;
   text-transform: capitalize;
+  color: #333; /* Улучшенный цвет заголовка */
+  font-weight: 700; /* Жирный заголовок */
 }
 
 .post-page__post p {
@@ -94,18 +177,71 @@ body {
   line-height: 1.7;
   margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2; /* Ограничение до 3 строк */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #555; /* Улучшенный цвет текста */
 }
 
 .post-page__status {
   font-size: 1.1rem;
   color: #888;
   margin-bottom: 1.5rem;
+  font-style: italic; /* Курсив для статуса */
 }
 
 .post-page__status--error {
   color: #d32f2f;
+  font-weight: 700; /* Жирный текст для ошибки */
 }
+
+/* Дополнительные улучшения */
+
+/* Отступы для удобства чтения */
+.post-page__post {
+  margin-bottom: 20px;
+}
+
+/* Стилизация ссылок, если они появятся */
+.post-page__post a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.post-page__post a:hover {
+  text-decoration: underline;
+}
+
+/* Если есть кнопка или интерактивный элемент */
+.post-page__button {
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.post-page__button:hover {
+  background-color: #1558b3;
+}
+
+/* 
+
+    Заголовки (h1): Сделал их более контрастными, изменив цвет на #333 и добавив font-weight: 700 для большей выразительности.
+
+    Параграфы (p): Немного затемнил цвет текста до #555 для лучшей читаемости.
+
+    Статус (.post-page__status): Добавил font-style: italic для выделения статуса как информационного элемента.
+
+    Статус ошибки (.post-page__status--error): Сделал текст жирным (font-weight: 700) для большей заметности ошибки.
+
+    Отступы: Добавил margin-bottom: 20px к .post-page__post для лучшего разделения между содержимым поста и другими элементами.
+
+    Стилизация ссылок: Если в будущем появятся ссылки в постах, они будут иметь стандартный синий цвет и подчеркивание при наведении.
+
+    Стилизация кнопки (пример): Если есть какие-либо интерактивные элементы, например, кнопки, я добавил базовые стили для них с эффектом наведения.
+*/
